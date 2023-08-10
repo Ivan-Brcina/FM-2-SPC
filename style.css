@@ -29,15 +29,14 @@ body {
   font-size: 15px;
   background-color: var(--c-main-background);
   text-align: center;
-}
-
-/* Main */
-
-.flex-main {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
 }
+
+/* Main - Mobile */
 
 .desktop-image {
   display: none;
@@ -47,13 +46,13 @@ body {
   width: 90%;
   max-width: 375px;
   height: auto;
-  margin: 50% auto;
   background-color: var(--c-card-background);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   border-radius: 10px;
+  margin: 20px 0;
 }
 
 .image-container {
@@ -81,7 +80,7 @@ body {
 .content {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   flex-direction: column;
 }
 
@@ -89,6 +88,7 @@ body {
 .paragraph {
   margin-top: 20px;
   padding: 10px 22px;
+  flex-grow: 1;
 }
 
 .heading {
@@ -136,6 +136,8 @@ body {
   font-weight: var(--fw-400);
   color: var(--c-stat-headings);
 }
+
+/* Main - Desktop */
 
 @media screen and (min-width: 1000px) {
   .main-container {
@@ -195,6 +197,7 @@ body {
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: white;
 }
 
 .attribution a {
