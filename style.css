@@ -30,10 +30,10 @@ body {
   background-color: var(--c-main-background);
   text-align: center;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+   min-height: 100vh;
 }
 
 /* Main - Mobile */
@@ -43,6 +43,7 @@ body {
 }
 
 .main-container {
+  margin-top: 3rem;
   width: 90%;
   max-width: 375px;
   height: auto;
@@ -55,17 +56,19 @@ body {
   margin: 20px 0;
 }
 
-.image-container {
-  display: inline-block;
+.img-container {
   position: relative;
-  width: 100%;
-  max-width: 375px;
-  height: 100%;
-  background-color: var(--c-accent);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  height: 280px;
 }
 
+.overlay {
+  background-color: var(--c-accent);
+  position: absolute;
+  border-radius: 10px 10px 0 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
 .mobile-image {
   height: 100%;
   width: 100%;
@@ -95,11 +98,13 @@ body {
   font-family: var(--ff-inter);
   font-weight: var(--fw-700);
   color: var(--c-white);
+  word-wrap: break-word;
+  width: 90%
 }
 
 .insights {
   color: var(--c-accent);
-}
+;}
 
 .paragraph {
   font-family: var(--ff-lexend-deca);
@@ -195,6 +200,7 @@ body {
 /* Attribution*/
 
 .attribution {
+  margin: 1rem 0 1rem 0;
   font-size: 11px;
   text-align: center;
   color: white;
