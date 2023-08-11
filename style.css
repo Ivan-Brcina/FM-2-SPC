@@ -29,6 +29,10 @@ body {
   font-size: 15px;
   background-color: var(--c-main-background);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Main */
@@ -38,10 +42,10 @@ body {
 }
 
 .main-container {
+  margin-top: 3rem;
   width: 90%;
   max-width: 375px;
   height: auto;
-  margin: 50% auto;
   background-color: var(--c-card-background);
   display: flex;
   justify-content: center;
@@ -50,17 +54,19 @@ body {
   border-radius: 10px;
 }
 
-.image-container {
-  display: inline-block;
+.img-container {
   position: relative;
-  width: 100%;
-  max-width: 375px;
-  height: 100%;
-  background-color: var(--c-accent);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  height: 280px;
 }
 
+.overlay {
+  background-color: var(--c-accent);
+  position: absolute;
+  border-radius: 10px 10px 0 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
 .mobile-image {
   height: 100%;
   width: 100%;
@@ -89,11 +95,13 @@ body {
   font-family: var(--ff-inter);
   font-weight: var(--fw-700);
   color: var(--c-white);
+  word-wrap: break-word;
+  width: 90%
 }
 
 .insights {
   color: var(--c-accent);
-}
+;}
 
 .paragraph {
   font-family: var(--ff-lexend-deca);
@@ -134,6 +142,7 @@ body {
 /* Attribution*/
 
 .attribution {
+  margin: 1rem 0 1rem 0;
   font-size: 11px;
   text-align: center;
 }
